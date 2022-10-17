@@ -21,7 +21,7 @@
 import argparse
 from uuid import uuid4
 from src.kafka_config import sasl_conf, schema_config
-from six.moves import input
+# from six.moves import input
 from src.kafka_logger import logging
 from confluent_kafka import Producer
 from confluent_kafka.serialization import StringSerializer, SerializationContext, MessageField
