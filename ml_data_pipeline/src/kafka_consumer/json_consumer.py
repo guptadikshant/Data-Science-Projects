@@ -30,6 +30,7 @@ def consumer_using_sample_file(topic,file_path):
         try:
             # SIGINT can't be handled when polling, limit timeout to 1 second.
             msg = consumer.poll(1.0)
+            print(msg)
             if msg is None:
                 continue
 
@@ -45,5 +46,4 @@ def consumer_using_sample_file(topic,file_path):
             x = x + 1
         except KeyboardInterrupt:
             break
-
     consumer.close()
