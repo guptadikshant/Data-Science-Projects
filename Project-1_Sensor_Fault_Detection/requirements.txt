@@ -1,2 +1,4 @@
-pymongo==4.2.0
+pymongo[srv]
 -e .
+certifi~=2022.9.24
+setuptools~=63.4.1
