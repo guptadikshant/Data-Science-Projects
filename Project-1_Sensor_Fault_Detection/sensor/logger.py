@@ -8,8 +8,6 @@ LOG_FILE = f"{datetime.now().strftime('%m_%d_%Y_%H_%M_%S')}.log"
 
 logs_path = os.path.join(from_root(), "Project-1_Sensor_Fault_Detection", "sensor", "logs", LOG_FILE)
 
-print(logs_path)
-
 os.makedirs(logs_path, exist_ok=True)
 
 LOG_FILE_PATH = os.path.join(logs_path, LOG_FILE)
