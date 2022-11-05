@@ -1,6 +1,8 @@
 import os
 from sensor.constant.s3_bucket import TRAINING_BUCKET_NAME
 
+SAVED_MODEL_DIR = os.path.join(os.getcwd(), "sensor", "ml", "saved_models")
+os.makedirs(SAVED_MODEL_DIR,exist_ok=True)
 # defining common constant variable for training pipeline
 TARGET_COLUMN = "class"
 PIPELINE_NAME: str = "sensor"
@@ -12,9 +14,8 @@ TEST_FILE_NAME: str = "test.csv"
 
 PREPROCSSING_OBJECT_FILE_NAME = "preprocessing.pkl"
 MODEL_FILE_NAME = "model.pkl"
-SCHEMA_FILE_PATH = os.path.join(os.getcwd(),"sensor","config", "schema.yaml")
+SCHEMA_FILE_PATH = os.path.join(os.getcwd(), "sensor", "config", "schema.yaml")
 SCHEMA_DROP_COLS = "drop_columns"
-
 
 """
 Data Ingestion related constant start with DATA_INGESTION VAR NAME

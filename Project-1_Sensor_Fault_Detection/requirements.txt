@@ -10,3 +10,4 @@ numpy==1.21.6
 dill
 PyYAML
 scipy
+imblearn
