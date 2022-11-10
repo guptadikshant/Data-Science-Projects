@@ -11,3 +11,4 @@ dill
 PyYAML
 scipy
 imblearn
+xgboost

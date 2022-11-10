@@ -1,8 +1,8 @@
 import os
 from sensor.constant.s3_bucket import TRAINING_BUCKET_NAME
 
-SAVED_MODEL_DIR = os.path.join(os.getcwd(), "sensor", "ml", "saved_models")
-os.makedirs(SAVED_MODEL_DIR,exist_ok=True)
+SAVED_MODEL_DIR = os.path.join(os.getcwd(), "saved_models")
+os.makedirs(SAVED_MODEL_DIR, exist_ok=True)
 # defining common constant variable for training pipeline
 TARGET_COLUMN = "class"
 PIPELINE_NAME: str = "sensor"
@@ -43,3 +43,22 @@ Data Transformation related constant start with DATA_TRANSFORMATION VAR NAME
 DATA_TRANSFORMATION_DIR_NAME: str = "data_transformation"
 DATA_TRANSFORMATION_TRANSFORMED_DATA_DIR: str = "transformed"
 DATA_TRANSFORMATION_TRANSFORMED_OBJECT_DIR: str = "transformed_object"
+
+"""
+Model Trainer related constant start with MODE TRAINER VAR NAME
+"""
+MODEL_TRAINER_DIR_NAME: str = "model_trainer"
+MODEL_TRAINER_TRAINED_MODEL_DIR: str = "trained_model"
+MODEL_TRAINER_TRAINED_MODEL_NAME: str = "model.pkl"
+MODEL_TRAINER_EXPECTED_SCORE: float = 0.6
+MODEL_TRAINER_OVER_FIITING_UNDER_FITTING_THRESHOLD: float = 0.05
+
+"""
+Model Trainer related constant start with MODE TRAINER VAR NAME
+"""
+MODEL_EVALUATION_DIR_NAME: str = "model_evaluation"
+MODEL_EVALUATION_CHANGED_THRESHOLD_SCORE: float = 0.02
+MODEL_EVALUAION_REPORT_NAME = "report.yaml"
+
+MODEL_PUSHER_DIR_NAME = "model_pusher"
+MODEL_PUSHER_SAVED_MODEL_DIR = SAVED_MODEL_DIR
