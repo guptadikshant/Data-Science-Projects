@@ -12,3 +12,5 @@ PyYAML
 scipy
 imblearn
 xgboost
+fastapi[all]
+starlette
